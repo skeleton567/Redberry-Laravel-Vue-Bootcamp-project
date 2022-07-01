@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.page{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.leftSide,
+.rightSide {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.chessImg{
+    width: 100%;
+    height: 96.12vh;
+    margin: 0;
+}
+
+.hide{
+    display: none;
+}
+
+.cupHeader{
+    font-family: 'Nunito', sans-serif;
+    background-color: #7025FB;
+    color: white;
+    padding-left: 50px;
+}
+
+.quote{
+    z-index: 1000;
+    position: absolute;
+}
+
