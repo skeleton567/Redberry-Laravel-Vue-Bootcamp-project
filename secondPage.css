@@ -1,0 +1,16 @@
+#secondPageQuote{
+    top: 251px;
+    left: 132px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+
+}
+
+#secondPageAuthor{
+    top: 358px;
+    left: 132px;
+    font-family: "Nunito", sans-serif;
+    font-size: 26px;
+    color: #E5E6E8;
+}
