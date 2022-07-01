@@ -1,0 +1,74 @@
+
+.mainPageRightSide{
+    background-color:  #FD5334;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 60px;
+    padding-top: 25px;
+    
+}
+
+.mainQuote{
+    z-index: 1000;
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+}
+
+
+#mainQuoteStart{
+   top: 185px;
+   left: 1008px;
+   
+} 
+
+#mainQuoteMiddle{
+    position: absolute;
+    Top: 226px;
+    Left: 1530px;
+    font-size: 20px;
+    font-weight: 700 ;
+    color:  #212529;
+    font-family: 'Nunito', sans-serif;
+ } 
+
+#mainQuoteEnd{
+    Top: 310px;
+    Left: 1008px;
+ } 
+
+
+ #startBtn{
+    background: none;
+	 border: none;
+    outline: inherit;
+    background: #212529;
+    border-radius: 8px;
+    width: 160px;
+    height: 50px;
+    padding: 25px, 40px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    box-sizing: content-box;
+    
+ }
+
+ #arrow{
+    width: 22px;
+    height: 22px;
+ }
+
+ #startBtn:hover {
+    border: 3px solid rgb(230, 142, 230) ;
+    transform: translate(-3px);
+ }
+
+ 
