@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="thirdPage.css">
     <link rel="stylesheet" href="forthPage.css">
     <script src="main.js" defer></script>
+    <script src="thirdPage.js" defer></script>
+    <script src="secondPage.js" defer></script>
     <title>Redberry Knight Cup</title>
 </head>
 <body>
 
     <!-- main page -->
 
-    <div class="page " id="firstPage">
+    <div class="page hide" id="firstPage">
         <div class="leftSide">
             <header class="cupHeader"><h2  class="cupName">&#9813 Redberry Knight Cup</h2></header>
             <img class="chessImg" src="photos/Landing page- scrolling photo.png" alt="woman playing chess">
@@ -28,14 +30,14 @@
         <div class="rightSide mainPageRightSide">
             <h3><span class="mainQuote" id="mainQuoteStart">CHESS SAYS </span><span id="mainQuoteMiddle">A LOT ABOUT</span>
                 <span class="mainQuote" id="mainQuoteEnd"> WHO WE ARE</span></h3>
-            <button id="startBtn">Get started  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+            <button class="startBtn">Get started  <img id="arrow" src="photos/Vector.png" alt=""> </button>
         </div>
 
     </div>
 
     <!-- Registration - person information page -->
 
-    <div class="page hide" id="secondPage">
+    <div class="page" id="secondPage">
         <div class="leftSide">
             <header class="cupHeader"><h2 class="cupName">&#9813 Redberry Knight Cup</h2></header>
             <img class="chessImg" src="photos/unsplash.png" alt="woman playing chess">
@@ -44,18 +46,57 @@
             <address  class="quote" id="secondPageAuthor">-EMANUEL LASKER</address>
         </div>
 
-        <div class="rightSide">
+        <div class="rightSide pageTwo">
             <header><h2>Start Creating Your Account</h2></header>
-            <input type="button" value="Get started">
-        </div>
+            <div>
+                <div>
+                    <p>1</p>
+                    <p>Personal information</p>
+                </div>
 
+                <div>
+                    <p>2</p>
+                    <p>Chess expirience</p>
+                </div>
+            </div>
+
+            <div>
+                <h1>Personal information</h1>
+                <p>This is basic information field</p>
+            </div>
+
+            <form id="firstForm" method="POST">
+                <input type="text" name="name" id="name" placeholder="Name *" >
+                <input type="email" name="email" id="email" placeholder="Email address *" >
+                <input type="number" name="number" id="number" placeholder="Phone number *">
+                <input type="text" name="date" id="date" placeholder="Date of birth *">
+                
+                <div>
+                    <button>back</button>
+                    <button id="secondPagebtn" class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+                </div>
+
+            </form>
+
+            <div class="hide error" id="errorMessage">
+                <div class="errorText">
+                <img src="photos/error.png" alt="error sign">
+                <h3 class="errorMain"></h3>
+                </div>
+                
+                <p class="errorInstr"></p>
+            </div>
+
+        </div>
     </div>
+
+    
 
 
     <!-- Registration - Chess expirience -->
 
 
-    <div class="page hide" id="thirdPage">
+    <div class="page" id="thirdPage">
         <div class="leftSide">
             <header class="cupHeader"><h2 class="cupName">&#9813 Redberry Knight Cup</h2></header>
             <img class="chessImg" src="photos/unsplash_2.png" alt="woman playing chess">
@@ -65,11 +106,60 @@
         </div>
 
         <div class="rightSide">
-            <header><h2>Start Creating Your Account</h2></header>
-            <input type="button" value="Get started">
-        </div>
+            <header><h2>First Step is Done, Continue To Finish Onboarding</h2></header>
+            <div>
+                <div>
+                    <p><img src="photos/competed.png" alt="Two green check"></p>
+                    <p>Personal information</p>
+                </div>
 
-    </div>
+                <div>
+                    <p>2</p>
+                    <p>Chess expirience</p>
+                </div>
+            </div>
+
+            <div>
+                <h1>Chess expirience</h1>
+                <p>This is basic information field</p>
+            </div>
+
+            <form method="POST">
+                <select required name="expirience" id="expirience">
+                    <option value="" hidden selected>Level of knowladge *</option>
+                    <option value="begginer">Begginer</option>
+                    <option value="intermidiate">Intermidiate</option>
+                    <option value="profesional">Intermidiate</option>
+                </select>
+
+                <div class="dropdown">
+                    <div id="selectField">
+                        <p id="grandmasterValue">Choose your character *</p>
+                    </div>
+
+                    <ul id="list" class="hide">
+                        
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Have you participated in the Redberry Championship? *</h3>
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="participated" id="yes" value="yes">
+                    <label for="no">No</label>
+                    <input type="radio" name="participated" id="no" value="no">
+                </div>
+                
+                <div>
+                    <button>back</button>
+                    <button class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+                </div>
+
+            </form>
+
+        </div>
+        </div>
+        </div>
 
 
     <!-- final page -->

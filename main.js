@@ -1,4 +1,4 @@
-const startBtn = document.querySelector("#startBtn");
+const startBtn = document.querySelector(".startBtn");
 const firstPage  = document.querySelector("#firstPage");
 const secondPage  = document.querySelector("#secondPage");
 
