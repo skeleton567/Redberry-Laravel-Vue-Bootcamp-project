@@ -14,3 +14,11 @@
     font-size: 26px;
     color: #E5E6E8;
 }
+
+.pageTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+

@@ -47,19 +47,26 @@
     width: 350px;
     height: 87px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 5px 10px 8px #888888;
-    padding-left: 5px;
+    padding: 9px;
 }
 
 .errorText{
     display: flex;
+    justify-content: space-between;
     
 }
 
 .errorText img {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.errorText div {
+    display: flex;
+    justify-content: space-around;
 }
 
 

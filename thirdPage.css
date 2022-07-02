@@ -35,6 +35,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .options:hover{
@@ -45,4 +47,9 @@
 .options img{
     width: 50px;
     height: 50px;
+}
+
+.selectWrap{
+    display: flex;
+    justify-content: space-between;
 }

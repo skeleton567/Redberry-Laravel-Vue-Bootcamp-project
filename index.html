@@ -69,7 +69,7 @@
                 <input type="text" name="name" id="name" placeholder="Name *" >
                 <input type="email" name="email" id="email" placeholder="Email address *" >
                 <input type="number" name="number" id="number" placeholder="Phone number *">
-                <input type="text" name="date" id="date" placeholder="Date of birth *">
+                <input type="date" name="date" id="date" placeholder="Date of birth *">
                 
                 <div>
                     <button>back</button>
@@ -80,8 +80,11 @@
 
             <div class="hide error" id="errorMessage">
                 <div class="errorText">
+                <div>
                 <img src="photos/error.png" alt="error sign">
                 <h3 class="errorMain"></h3>
+                </div>
+                <img class="closeErr" src="photos/X.png" alt="">
                 </div>
                 
                 <p class="errorInstr"></p>
@@ -124,12 +127,14 @@
                 <p>This is basic information field</p>
             </div>
 
-            <form method="POST">
-                <select required name="expirience" id="expirience">
+            <form id="secondForm" method="POST">
+
+                <div class="selectWrap">
+                <select  name="expirience" id="expirience">
                     <option value="" hidden selected>Level of knowladge *</option>
-                    <option value="begginer">Begginer</option>
-                    <option value="intermidiate">Intermidiate</option>
-                    <option value="profesional">Intermidiate</option>
+                    <option value="beginner">Begginer</option>
+                    <option value="normal">Intermidiate</option>
+                    <option value="professional">Profesional</option>
                 </select>
 
                 <div class="dropdown">
@@ -138,16 +143,17 @@
                     </div>
 
                     <ul id="list" class="hide">
-                        
+                        <il class="options"><option class="otherOption">Other</option><img id="other" src="photos/chess.webp" alt=""></il>
                     </ul>
                 </div>
+            </div>
 
                 <div>
                     <h3>Have you participated in the Redberry Championship? *</h3>
                     <label for="yes">Yes</label>
-                    <input type="radio" name="participated" id="yes" value="yes">
+                    <input type="radio" name="participated" id="yes" value=true>
                     <label for="no">No</label>
-                    <input type="radio" name="participated" id="no" value="no">
+                    <input type="radio" name="participated" id="no" value=false>
                 </div>
                 
                 <div>
@@ -156,6 +162,18 @@
                 </div>
 
             </form>
+
+            <div class="hide error" id="secondErrorMessage">
+                <div class="errorText">
+                <div>
+                <img src="photos/error.png" alt="error sign">
+                <h3 class="errorMain" id="errorMain"></h3>
+                </div>
+                <img class="closeErr" id="closeErr" src="photos/X.png" alt="">
+                </div>
+                
+                <p class="errorInstr" id="errorInstr" ></p>
+            </div>
 
         </div>
         </div>
