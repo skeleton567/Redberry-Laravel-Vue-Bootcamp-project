@@ -98,3 +98,10 @@ color: #DC3545;
     position: absolute;
 }
 
+
+    /* second and third page common css */
+
+.rightSideTwoThree{
+    padding-left: 48px;
+    padding-right: 174px;
+}

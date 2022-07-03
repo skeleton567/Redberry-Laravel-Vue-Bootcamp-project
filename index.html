@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="thirdPage.css">
     <link rel="stylesheet" href="forthPage.css">
     <script src="main.js" defer></script>
-    <script src="thirdPage.js" defer></script>
     <script src="secondPage.js" defer></script>
+    <script src="thirdPage.js" defer></script>
+    <script src="inputSave.js" defer></script>
     <title>Redberry Knight Cup</title>
 </head>
 <body>
@@ -41,12 +42,12 @@
         <div class="leftSide">
             <header class="cupHeader"><h2 class="cupName">&#9813 Redberry Knight Cup</h2></header>
             <img class="chessImg" src="photos/unsplash.png" alt="woman playing chess">
-            <blockquote class="quote" id="secondPageQuote">"WHE YOU SEE A GOOD MOVE, <br>
+            <blockquote class="quote" id="secondPageQuote">"WHEN YOU SEE A GOOD MOVE, <br>
             LOOK FOR A BETTER ONE"</blockquote>
             <address  class="quote" id="secondPageAuthor">-EMANUEL LASKER</address>
         </div>
 
-        <div class="rightSide pageTwo">
+        <div class="rightSide pageTwo rightSideTwoThree">
             <header><h2>Start Creating Your Account</h2></header>
             <div>
                 <div>
@@ -72,7 +73,7 @@
                 <input type="date" name="date" id="date" placeholder="Date of birth *">
                 
                 <div>
-                    <button>back</button>
+                    <button class="back" id="secondPageBack" type="button">back</button>
                     <button id="secondPagebtn" class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
                 </div>
 
@@ -99,7 +100,7 @@
     <!-- Registration - Chess expirience -->
 
 
-    <div class="page" id="thirdPage">
+    <div class="page hide" id="thirdPage">
         <div class="leftSide">
             <header class="cupHeader"><h2 class="cupName">&#9813 Redberry Knight Cup</h2></header>
             <img class="chessImg" src="photos/unsplash_2.png" alt="woman playing chess">
@@ -108,7 +109,7 @@
             <address class="quote" id="thirdPageAuthor">-SIEGBERT TARRASCH</address>
         </div>
 
-        <div class="rightSide">
+        <div class="rightSide rightSideTwoThree">
             <header><h2>First Step is Done, Continue To Finish Onboarding</h2></header>
             <div>
                 <div>
@@ -132,9 +133,9 @@
                 <div class="selectWrap">
                 <select  name="expirience" id="expirience">
                     <option value="" hidden selected>Level of knowladge *</option>
-                    <option value="beginner">Begginer</option>
+                    <option value="beginner">Beginner</option>
                     <option value="normal">Intermidiate</option>
-                    <option value="professional">Profesional</option>
+                    <option value="professional">Professional</option>
                 </select>
 
                 <div class="dropdown">
@@ -143,6 +144,10 @@
                     </div>
 
                     <ul id="list" class="hide">
+                        <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
+                        <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
+                        <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
+                        <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
                         <il class="options"><option class="otherOption">Other</option><img id="other" src="photos/chess.webp" alt=""></il>
                     </ul>
                 </div>
@@ -151,13 +156,13 @@
                 <div>
                     <h3>Have you participated in the Redberry Championship? *</h3>
                     <label for="yes">Yes</label>
-                    <input type="radio" name="participated" id="yes" value=true>
+                    <input type="radio" name="participated" id="yes" value="true">
                     <label for="no">No</label>
-                    <input type="radio" name="participated" id="no" value=false>
+                    <input type="radio" name="participated" id="no" value="false">
                 </div>
                 
                 <div>
-                    <button>back</button>
+                    <button class="back" id="thirdPageBack" type="button">back</button>
                     <button class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
                 </div>
 

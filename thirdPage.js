@@ -10,7 +10,11 @@ const secondErrorMessage = document.querySelector("#secondErrorMessage");
 const secondErrorInstr = document.querySelector("#errorInstr");
 const secondErrorMain = document.querySelector("#errorMain");
 const otherOption = document.querySelector(".otherOption");
-
+const options = document.querySelectorAll(".otherOption");
+const grandOptions = document.querySelectorAll(".grandOptions");
+const grandOption = document.querySelectorAll(".grandOption");
+const grandmasterImg = document.querySelectorAll(".grandmasterImg");
+let character_id;
 
 const connection = async url => {
     try {
@@ -24,28 +28,28 @@ const connection = async url => {
     }
 }
 
-
 connection("grandmasters")
     .then(data =>{
         for(let grandmaster of data){
-            
-            const li = document.createElement("li");
-            const option = document.createElement("option");
-            const img = document.createElement("img");
-            
-            img.src = grandmaster.image;
-            option.value = grandmaster.name;
-            option.innerHTML = `${grandmaster.name}`;
-            
-            option.addEventListener("click", event =>{
-                grandmasterValue.innerText = event.target.innerText;
-                grandmasterList.classList.toggle("hide");
-            })
 
-            li.appendChild(option);
-            li.appendChild(img);
-            li.classList.toggle("options");
-            grandmasterList.appendChild(li);
+            for(let i = 0; i < grandOption.length; i++){
+                if(i === grandmaster.id - 1){
+                    
+                    grandOption[i].value = grandmaster.id;
+                    grandmasterImg[i].src = `https://chess-tournament-api.devtest.ge${grandmaster.image}`;
+                    grandOption[i].innerHTML = `${grandmaster.name}`;
+                    console.log(grandmasterImg);
+                    grandOption[i].addEventListener("click", event =>{
+                        grandmasterValue.innerText = event.target.innerText;
+                        grandmasterList.classList.toggle("hide");
+                        character_id = grandOption[i].value;
+                        localStorage.setItem("innerText", event.target.innerText);
+                        localStorage.setItem("character_id", character_id);
+                })
+            }
+            
+            }
+            
         }
 })
 
@@ -53,6 +57,9 @@ connection("grandmasters")
 otherOption.addEventListener("click", event =>{
     grandmasterValue.innerText = event.target.innerText;
     grandmasterList.classList.toggle("hide");
+    character_id = 0;
+    localStorage.setItem("innerText", event.target.innerText);
+    localStorage.setItem("character_id", character_id);
 })
 
 
@@ -101,13 +108,16 @@ secondForm.addEventListener("submit", event =>{
         console.log(selectExpirience.value);
         persInfo.experience_level = selectExpirience.value;
 
-        persInfo.grandmaster = grandmasterValue.innerText;
+        persInfo.character_id = character_id;
 
         let checkedRadio = document.querySelector('input[name="participated"]:checked');
         persInfo.already_participated = JSON.parse(checkedRadio.value.toLowerCase());
         
 
-        fetch("https://chess-tournament-api.devtest.ge/api/register", {
+        console.log(persInfo);
+        
+        try {
+            fetch("https://chess-tournament-api.devtest.ge/api/register", {
             method: "POST",
             headers: {
                 "Content-type": "application/JSON",
@@ -115,9 +125,16 @@ secondForm.addEventListener("submit", event =>{
             },
             body: JSON.stringify(persInfo)
         }) .then (res =>{
-            console.log(res);
-            return res.json()
-        }) .then(data => console.log(data))
+            if(res.status === 201){
+                localStorage.clear();
+                forthPage.classList.toggle("hide");
+                thirdPage.classList.toggle("hide");
+            }
+        }) 
+        } catch (error) {
+            console.log(error);
+        }
+        
 
     }
 

@@ -13,6 +13,7 @@ let persInfo;
 firstForm.addEventListener("submit", event =>{
     event.preventDefault();
     let phoneRegex = /^[0-9]*$/;
+    let emailRegex = /.@redberry.ge*$/
 
     if (name.value.length < 2 || name.value === "" || name.value === null ){
 
@@ -25,7 +26,7 @@ firstForm.addEventListener("submit", event =>{
         errorMain.innerText = "Invalid name"
         errorInstr.innerText = "Name should contain at least 2 characters"
 
-    } else  if(email.value === "" || email.value === null || !email.value.includes("@redberry.ge")){
+    } else  if(email.value === "" || email.value === null || !emailRegex.test(email.value)){
         if(errorMessage.classList.contains("hide")){
             errorMessage.classList.toggle("hide");
         }
@@ -54,8 +55,14 @@ firstForm.addEventListener("submit", event =>{
             date_of_birth: date.value
         }
 
-        let count = Math.floor(Math.random()+1) * 9;
-        persInfo.character_id = count;
+        
         console.log(persInfo);
+
+        thirdPage.classList.toggle("hide");
+        secondPage.classList.toggle("hide");
+
+        if(!errorMessage.classList.contains("hide")){
+            errorMessage.classList.toggle("hide");
+        }
     }
 })
