@@ -41,7 +41,7 @@
 }
 
 .options:hover{
-    background-color:  #F7F7F9;;
+    background-color:  #F7F7F9;
 }
 
 
@@ -53,4 +53,38 @@
 .selectWrap{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 88px;
 }
+
+#expirience{
+    border:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none;
+    width: 350px;
+    border-bottom: 1px solid #E5E6E8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+#expirience:focus {
+    outline: none;
+}
+
+.dropdown{
+    width: 350px;
+    border-bottom: 1px solid #E5E6E8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+#list{
+    position: absolute;
+    top: 450px;
+    left: 1393px;
+    z-index: 1000;
+    width: 350px;
+    background-color: white;
+}
+

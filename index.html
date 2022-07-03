@@ -47,37 +47,41 @@
             <address  class="quote" id="secondPageAuthor">-EMANUEL LASKER</address>
         </div>
 
-        <div class="rightSide pageTwo rightSideTwoThree">
-            <header><h2>Start Creating Your Account</h2></header>
-            <div>
-                <div>
-                    <p>1</p>
-                    <p>Personal information</p>
+        <div class="rightSide pageTwo ">
+            <header class="rightSideHeader"><h2>Start Creating Your Account</h2></header>
+            <main class="rightSidemain">
+
+            <div class="roadMap">
+                <div class="perInfo">
+                    <p class="roadMapNum">1</p>
+                    <p lass="roadMapText">Personal information</p>
                 </div>
 
-                <div>
-                    <p>2</p>
-                    <p>Chess expirience</p>
+                <div class="chessExp">
+                    <p class="roadMapNum">2</p>
+                    <p lass="roadMapText">Chess expirience</p>
                 </div>
             </div>
 
-            <div>
-                <h1>Personal information</h1>
-                <p>This is basic information field</p>
+            <div class="pageInfo">
+                <h1 class="pageName">Personal information</h1>
+                <p class="pageDisc">This is basic information fields</p>
             </div>
 
             <form id="firstForm" method="POST">
-                <input type="text" name="name" id="name" placeholder="Name *" >
-                <input type="email" name="email" id="email" placeholder="Email address *" >
-                <input type="number" name="number" id="number" placeholder="Phone number *">
-                <input type="date" name="date" id="date" placeholder="Date of birth *">
+    
+                <input class="input" type="text" name="name" id="name" placeholder="Name *" >
+                <input class="input" type="email" name="email" id="email" placeholder="Email address *" >
+                <input class="input" type="number" name="number" id="number" placeholder="Phone number *">
+                <input class="input"type="date" name="date" id="date" placeholder="Date of birth *">
                 
-                <div>
-                    <button class="back" id="secondPageBack" type="button">back</button>
+                <div class="buttons">
+                    <button class="back backBtn" id="secondPageBack" type="button">back</button>
                     <button id="secondPagebtn" class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
                 </div>
 
             </form>
+        </main>
 
             <div class="hide error" id="errorMessage">
                 <div class="errorText">
@@ -110,22 +114,22 @@
         </div>
 
         <div class="rightSide rightSideTwoThree">
-            <header><h2>First Step is Done, Continue To Finish Onboarding</h2></header>
-            <div>
-                <div>
-                    <p><img src="photos/competed.png" alt="Two green check"></p>
-                    <p>Personal information</p>
+            <header class="rightSideHeader"><h2>First Step is Done, Continue To Finish Onboarding</h2></header>
+            <main class="rightSidemain">
+                <div class="roadMap">
+                    <div class="perInfo">
+                        <p class="roadMapNum"><img src="photos/competed.png" alt="Two green check"></p>
+                        <p lass="roadMapText">Personal information</p>
+                    </div>
+    
+                    <div class="chessExp">
+                        <p class="roadMapNum">2</p>
+                        <p lass="roadMapText">Chess expirience</p>
+                    </div>
                 </div>
-
-                <div>
-                    <p>2</p>
-                    <p>Chess expirience</p>
-                </div>
-            </div>
-
-            <div>
-                <h1>Chess expirience</h1>
-                <p>This is basic information field</p>
+            <div class="pageInfo">
+                <h1 class="pageName">Chess expirience</h1>
+                <p class="pageDisc">This is basic information field</p>
             </div>
 
             <form id="secondForm" method="POST">
@@ -133,9 +137,9 @@
                 <div class="selectWrap">
                 <select  name="expirience" id="expirience">
                     <option value="" hidden selected>Level of knowladge *</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="normal">Intermidiate</option>
-                    <option value="professional">Professional</option>
+                    <option class="option" value="beginner">Beginner</option>
+                    <option class="option" value="normal">Intermidiate</option>
+                    <option class="option" value="professional">Professional</option>
                 </select>
 
                 <div class="dropdown">
@@ -161,12 +165,13 @@
                     <input type="radio" name="participated" id="no" value="false">
                 </div>
                 
-                <div>
-                    <button class="back" id="thirdPageBack" type="button">back</button>
+                <div class="buttons">
+                    <button class="back backBtn" id="thirdPageBack" type="button">back</button>
                     <button class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
                 </div>
 
             </form>
+        </main>
 
             <div class="hide error" id="secondErrorMessage">
                 <div class="errorText">
