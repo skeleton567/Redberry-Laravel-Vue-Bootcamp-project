@@ -15,16 +15,24 @@
     color: #E5E6E8;
 }
 
-.input{
+.inputWrap{
     width: 100%;
-    border: none;
     border-bottom: 1px solid #E5E6E8;
-    display: flex;
-    align-items: center;
-    padding: 16px 8px;
     color: #212529;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    
+    border: none;
+    width: 94%;
+    
+    align-items: center;
+    padding: 16px 8px;
+    
 
 }
 
@@ -32,7 +40,11 @@
     outline: none;
 }
 
-.input:hover{
+input:hover{
+    background-color: #E9FAF1;
+}
+
+.inputWrap:hover{
     background-color: #E9FAF1;
 }
 
@@ -54,6 +66,12 @@
     color: #DC3545;
 }
 
-#date{
+#lastInput{
     margin-bottom: 109px;
 }
+
+.validImg{
+    width: 20px;
+    height: 20px;
+}
+

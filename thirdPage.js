@@ -17,6 +17,7 @@ const grandmasterImg = document.querySelectorAll(".grandmasterImg");
 const doneBtn = document.querySelector("#done");
 const submitBtn = document.querySelector("#submitBtn");
 const thirdPageHeaderText = document.querySelector("#thirdPageHeaderText");
+const twoGreenCheck = document.querySelector(".twoGreenCheck");
 let character_id;
 
 

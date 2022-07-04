@@ -189,6 +189,7 @@ font-weight: 600;
     border: 1px solid #212529;
     border-radius: 8px;
     padding: 13px 24px;
+    height: 53px;
 }
 
 .backBtn:hover{
@@ -241,3 +242,18 @@ font-weight: 600;
     background-color: #E9FAF1;
 }
 
+.redStar{
+    color: #DC3545;
+}
+
+
+.submitBtn{
+    width: 128px;
+    height: 53px;
+    font-size: 20px;
+    
+}
+
+.submitBtn:hover{
+    transform: translate(3px, -3px);
+}

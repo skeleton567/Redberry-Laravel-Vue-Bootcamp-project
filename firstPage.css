@@ -41,18 +41,16 @@
  } 
 
 
- .startBtn{
+ .blackBtn{
     background: none;
 	 border: none;
     outline: inherit;
     background: #212529;
     border-radius: 8px;
-    width: 160px;
-    height: 50px;
-    padding: 25px, 40px;
+    
     color: white;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    
     cursor: pointer;
     display: flex;
     align-items:center;
@@ -61,14 +59,27 @@
     
  }
 
+ .startBtn{
+   width: 160px;
+    height: 50px;
+    padding: 25px, 40px;
+    font-size: 20px;
+ }
+
+ .startBtn:hover {
+   
+   transform: translate(-3px);
+}
+
+.blackBtn:hover{
+   border: 3px solid rgb(230, 142, 230) ;
+}
+
  #arrow{
     width: 22px;
     height: 22px;
  }
 
- .startBtn:hover {
-    border: 3px solid rgb(230, 142, 230) ;
-    transform: translate(-3px);
- }
+ 
 
  

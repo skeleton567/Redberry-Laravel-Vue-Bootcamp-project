@@ -23,7 +23,7 @@
 
     <!-- main page -->
 
-    <div class="page hide" id="firstPage">
+    <div class="page" id="firstPage">
         <div class="leftSide">
             <header class="cupHeader"><h2  class="cupName">&#9813 Redberry Knight Cup</h2></header>
             <img class="chessImg" src="photos/Landing page- scrolling photo.png" alt="woman playing chess">
@@ -32,14 +32,14 @@
         <div class="rightSide mainPageRightSide">
             <h3><span class="mainQuote" id="mainQuoteStart">CHESS SAYS </span><span id="mainQuoteMiddle">A LOT ABOUT</span>
                 <span class="mainQuote" id="mainQuoteEnd"> WHO WE ARE</span></h3>
-            <button class="startBtn">Get started  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+            <button class="blackBtn startBtn">Get started  <img id="arrow" src="photos/Vector.png" alt=""> </button>
         </div>
 
     </div>
 
     <!-- Registration - person information page -->
 
-    <div class="page" id="secondPage">
+    <div class="page hide" id="secondPage">
         <div class="leftSide">
             <header class="cupHeader"><h2 class="cupName">&#9813 Redberry Knight Cup</h2></header>
             <img class="chessImg" src="photos/unsplash.png" alt="woman playing chess">
@@ -54,7 +54,10 @@
 
             <div class="roadMap">
                 <div class="perInfo">
-                    <p class="roadMapNum secondPageNumOne">1</p>
+                    <p class="roadMapNum secondPageNumOne">
+                        <img id="twoGreenCheck" class="twoGreenCheck hide" src="photos/competed.png" alt="Two green check">
+                        <span id="numValue">1<span> 
+                    </p>
                     <div class="hr"></div>
                     <p class="roadMapNum greyBack secondPageNumtwo">2</p>
                     
@@ -72,15 +75,27 @@
             </div>
 
             <form id="firstForm" method="POST">
-    
-                <input class="input" type="text" name="name" id="name" placeholder="Name *" >
-                <input class="input" type="email" name="email" id="email" placeholder="Email address *" >
-                <input class="input" type="number" name="number" id="number" placeholder="Phone number *">
-                <input class="input" type="textbox-n" name="date" id="date" onfocus="(this.type='date')"" placeholder="Date of birth *">
                 
+                <div class="inputWrap nameWrap">
+                <input class="input" type="text" name="name" id="name" placeholder="Name *" >
+                <img class="validImg nameImg hide" src="photos/valid.png" alt="">
+                </div>
+                <div class="inputWrap  emailWrap">
+                <input class="input" type="email" name="email" id="email" placeholder="Email address *" >
+                <img class="validImg emailImg hide" src="photos/valid.png" alt="">
+                </div >
+                <div class="inputWrap  numberWrap"> 
+                <input class="input" type="number" name="number" id="number" placeholder="Phone number *">
+                <img class="validImg numberImg hide" src="photos/valid.png" alt="">
+                </div>
+                <div class="inputWrap dateWrap" id="lastInput">
+                <input class="input" type="textbox-n" name="date" id="date" onfocus="(this.type='date')"" placeholder="Date of birth *">
+                <img class="validImg dateImg hide" src="photos/valid.png" alt="">
+                </div>
+
                 <div class="buttons">
                     <button class="back backBtn" id="secondPageBack" type="button">back</button>
-                    <button id="secondPagebtn" class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+                    <button id="secondPagebtn" class="blackBtn submitBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
                 </div>
 
             </form>
@@ -144,7 +159,7 @@
 
                 <div class="selectWrap">
                 <select  name="expirience" id="expirience">
-                    <option value="" hidden selected>Level of knowladge *</option>
+                    <option value="" hidden selected>Level of knowladge<span class="redStar"> *</span></option>
                     <option class="option" value="beginner">Beginner</option>
                     <option class="option" value="normal">Intermidiate</option>
                     <option class="option" value="professional">Professional</option>
@@ -152,10 +167,11 @@
 
                 <div class="dropdown">
                     <div id="selectField">
-                        <p id="grandmasterValue">Choose your character *</p>
+                        <p id="grandmasterValue">Choose your character<span class="redStar"> *</span></p>
                     </div>
 
                     <ul id="list" class="hide">
+                        <p class="totalFour">(Total 4)</p>
                         <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
                         <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
                         <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
@@ -166,7 +182,7 @@
             </div>
 
                 <div id="radio">
-                    <h3 id="question">Have you participated in the Redberry Championship? *</h3>
+                    <h3 id="question">Have you participated in the Redberry Championship?<span class="redStar"> *</span></h3>
                     <label class="radioLabel" for="yes">Yes</label>
                     <input type="radio" name="participated" id="yes" value="true">
                     <label class="radioLabel" for="no">No</label>
@@ -175,8 +191,8 @@
                 
                 <div class="buttons">
                     <button class="back backBtn" id="thirdPageBack" type="button">back</button>
-                    <button id="submitBtn" class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
-                    <button  type="button" id="done" class="startBtn hide">Done</button>
+                    <button id="submitBtn" class="blackBtn submitBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+                    <button  type="button" id="done" class="blackBtn doneBtn hide">Done</button>
                 </div>
 
             </form>
