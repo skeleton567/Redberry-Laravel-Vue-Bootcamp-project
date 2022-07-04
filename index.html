@@ -16,7 +16,8 @@
     <script src="secondPage.js" defer></script>
     <script src="thirdPage.js" defer></script>
     <script src="inputSave.js" defer></script>
-    <title>Redberry Knight Cup</title>
+    <script src="sendInfo.js" defer></script>
+    <title>&#9813 Redberry Knight Cup</title>
 </head>
 <body>
 
@@ -53,12 +54,14 @@
 
             <div class="roadMap">
                 <div class="perInfo">
-                    <p class="roadMapNum">1</p>
-                    <p lass="roadMapText">Personal information</p>
+                    <p class="roadMapNum secondPageNumOne">1</p>
+                    <div class="hr"></div>
+                    <p class="roadMapNum greyBack secondPageNumtwo">2</p>
+                    
                 </div>
 
                 <div class="chessExp">
-                    <p class="roadMapNum">2</p>
+                    <p lass="roadMapText">Personal information</p>
                     <p lass="roadMapText">Chess expirience</p>
                 </div>
             </div>
@@ -73,7 +76,7 @@
                 <input class="input" type="text" name="name" id="name" placeholder="Name *" >
                 <input class="input" type="email" name="email" id="email" placeholder="Email address *" >
                 <input class="input" type="number" name="number" id="number" placeholder="Phone number *">
-                <input class="input"type="date" name="date" id="date" placeholder="Date of birth *">
+                <input class="input" type="textbox-n" name="date" id="date" onfocus="(this.type='date')"" placeholder="Date of birth *">
                 
                 <div class="buttons">
                     <button class="back backBtn" id="secondPageBack" type="button">back</button>
@@ -85,7 +88,7 @@
 
             <div class="hide error" id="errorMessage">
                 <div class="errorText">
-                <div>
+                <div class="errorHeader">
                 <img src="photos/error.png" alt="error sign">
                 <h3 class="errorMain"></h3>
                 </div>
@@ -114,24 +117,29 @@
         </div>
 
         <div class="rightSide rightSideTwoThree">
-            <header class="rightSideHeader"><h2>First Step is Done, Continue To Finish Onboarding</h2></header>
+            <header class="rightSideHeader"><h2 id="thirdPageHeaderText">First Step is Done, Continue To Finish Onboarding</h2></header>
             <main class="rightSidemain">
+
                 <div class="roadMap">
                     <div class="perInfo">
-                        <p class="roadMapNum"><img src="photos/competed.png" alt="Two green check"></p>
-                        <p lass="roadMapText">Personal information</p>
+                        <p class="roadMapNum greyBack"><img class="twoGreenCheck" src="photos/competed.png" alt="Two green check"></p>
+                        <div class="hr"></div>
+                        <p class="roadMapNum thirdPageNumtwo">2</p>
+                        
                     </div>
     
                     <div class="chessExp">
-                        <p class="roadMapNum">2</p>
+                        <p lass="roadMapText">Personal information</p>
                         <p lass="roadMapText">Chess expirience</p>
                     </div>
                 </div>
-            <div class="pageInfo">
-                <h1 class="pageName">Chess expirience</h1>
-                <p class="pageDisc">This is basic information field</p>
-            </div>
-
+    
+                <div class="pageInfo">
+                    <h1 class="pageName">Personal information</h1>
+                    <p class="pageDisc">This is basic information fields</p>
+                </div>
+                
+                
             <form id="secondForm" method="POST">
 
                 <div class="selectWrap">
@@ -157,17 +165,18 @@
                 </div>
             </div>
 
-                <div>
-                    <h3>Have you participated in the Redberry Championship? *</h3>
-                    <label for="yes">Yes</label>
+                <div id="radio">
+                    <h3 id="question">Have you participated in the Redberry Championship? *</h3>
+                    <label class="radioLabel" for="yes">Yes</label>
                     <input type="radio" name="participated" id="yes" value="true">
-                    <label for="no">No</label>
+                    <label class="radioLabel" for="no">No</label>
                     <input type="radio" name="participated" id="no" value="false">
                 </div>
                 
                 <div class="buttons">
                     <button class="back backBtn" id="thirdPageBack" type="button">back</button>
-                    <button class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+                    <button id="submitBtn" class="startBtn">Next  <img id="arrow" src="photos/Vector.png" alt=""> </button>
+                    <button  type="button" id="done" class="startBtn hide">Done</button>
                 </div>
 
             </form>
@@ -175,7 +184,7 @@
 
             <div class="hide error" id="secondErrorMessage">
                 <div class="errorText">
-                <div>
+                <div class="errorHeader">
                 <img src="photos/error.png" alt="error sign">
                 <h3 class="errorMain" id="errorMain"></h3>
                 </div>

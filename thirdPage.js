@@ -14,7 +14,11 @@ const options = document.querySelectorAll(".otherOption");
 const grandOptions = document.querySelectorAll(".grandOptions");
 const grandOption = document.querySelectorAll(".grandOption");
 const grandmasterImg = document.querySelectorAll(".grandmasterImg");
+const doneBtn = document.querySelector("#done");
+const submitBtn = document.querySelector("#submitBtn");
+const thirdPageHeaderText = document.querySelector("#thirdPageHeaderText");
 let character_id;
+
 
 const connection = async url => {
     try {
@@ -39,12 +43,26 @@ connection("grandmasters")
                     grandmasterImg[i].src = `https://chess-tournament-api.devtest.ge${grandmaster.image}`;
                     grandOption[i].innerHTML = `${grandmaster.name}`;
                     console.log(grandmasterImg);
-                    grandOption[i].addEventListener("click", event =>{
-                        grandmasterValue.innerText = event.target.innerText;
-                        grandmasterList.classList.toggle("hide");
-                        character_id = grandOption[i].value;
-                        localStorage.setItem("innerText", event.target.innerText);
-                        localStorage.setItem("character_id", character_id);
+
+                    grandOptions[i].addEventListener("click", event =>{
+
+                        if(!event.target.src){
+                            grandmasterValue.innerText = event.target.innerText;
+                            grandmasterList.classList.toggle("hide");
+                            character_id = grandOption[i].value;
+                            localStorage.setItem("innerText", event.target.innerText);
+                            localStorage.setItem("character_id", character_id);
+
+                            thirdPageNumtwo.classList.add("greyBack");
+
+                            if(!doneBtn.classList.contains("hide")){
+                                doneBtn.classList.toggle("hide");
+                                submitBtn.classList.toggle("hide");
+                                thirdPageHeaderText.innerText = "First Step is Done, Continue To Finish Onboarding";
+                            }
+                        
+                        }
+                       
                 })
             }
             
@@ -86,11 +104,11 @@ secondForm.addEventListener("submit", event =>{
         secondErrorInstr.innerText = "You should choose one from given options"
 
     } else  if(grandmasterValue.innerText !== "Nona Gaphrindashvili" && grandmasterValue.innerText !== "Mikhail Tal" 
-    && !grandmasterValue.innerText !== "Bobby Fisher" && grandmasterValue.innerText !== "Bobby Fisher" && grandmasterValue.innerText !== "Other"){
+    && grandmasterValue.innerText !== "Bobby Fisher" && grandmasterValue.innerText !== "Magnus Carlsen" && grandmasterValue.innerText !== "Other"){
         if(secondErrorMessage.classList.contains("hide")){
             secondErrorMessage.classList.toggle("hide");
         }
-        
+        console.log(grandmasterValue.innerText);
         secondErrorMain.innerText = "Invalid Grandmaster"
         secondErrorInstr.innerText = "You should choose one from given option"
 
@@ -105,38 +123,14 @@ secondForm.addEventListener("submit", event =>{
 
     } else {
 
-        console.log(selectExpirience.value);
-        persInfo.experience_level = selectExpirience.value;
+        thirdPageHeaderText.innerText = "Almost done!";
+        doneBtn.classList.toggle("hide");
+        submitBtn.classList.toggle("hide");
 
-        persInfo.character_id = character_id;
-
-        let checkedRadio = document.querySelector('input[name="participated"]:checked');
-        persInfo.already_participated = JSON.parse(checkedRadio.value.toLowerCase());
-        
-
-        console.log(persInfo);
-        
-        try {
-            fetch("https://chess-tournament-api.devtest.ge/api/register", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/JSON",
-                "accept": "application/json"
-            },
-            body: JSON.stringify(persInfo)
-        }) .then (res =>{
-            if(res.status === 201){
-                localStorage.clear();
-                forthPage.classList.toggle("hide");
-                thirdPage.classList.toggle("hide");
-            }
-        }) 
-        } catch (error) {
-            console.log(error);
+        if(!secondErrorMessage.classList.contains("hide")){
+            secondErrorMessage.classList.toggle("hide");
         }
-        
-
     }
-
-
-})
+        
+        
+    })

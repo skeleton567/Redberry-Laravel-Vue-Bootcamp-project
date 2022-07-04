@@ -19,6 +19,14 @@ secondPageBack.addEventListener("click", event =>{
 thirdPageBack.addEventListener("click", event =>{
     thirdPage.classList.toggle("hide");
     secondPage.classList.toggle("hide");
+
+    if(!doneBtn.classList.contains("hide")){
+        doneBtn.classList.toggle("hide");
+        submitBtn.classList.toggle("hide");
+        thirdPageHeaderText.innerText = "First Step is Done, Continue To Finish Onboarding";
+    }
+
+    
 })
 
        

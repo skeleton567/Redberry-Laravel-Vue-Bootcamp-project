@@ -86,5 +86,29 @@
     z-index: 1000;
     width: 350px;
     background-color: white;
+    box-shadow: 5px 10px 8px #888888
 }
 
+.grandmasterImg{
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 4px;
+}
+
+#radio{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 187px;
+}
+
+#question{
+    font-size: 20px;
+    color: #212529;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.radioLabel{
+    font-size: 16px;
+    color: #212529;
+    
+}

@@ -28,6 +28,32 @@
 
 }
 
-input:focus{
+.input:focus{
     outline: none;
+}
+
+.input:hover{
+    background-color: #E9FAF1;
+}
+
+.input::placeholder{
+    color: #212529;
+}
+
+
+.input:hover::placeholder{
+    color: #95939A;
+}
+
+.secondPageNumtwo{
+    color:#95939A;
+}
+
+.inputval{
+    background-color: #FFEFEF;
+    color: #DC3545;
+}
+
+#date{
+    margin-bottom: 109px;
 }
