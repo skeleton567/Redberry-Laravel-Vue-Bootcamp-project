@@ -18,6 +18,10 @@ const doneBtn = document.querySelector("#done");
 const submitBtn = document.querySelector("#submitBtn");
 const thirdPageHeaderText = document.querySelector("#thirdPageHeaderText");
 const twoGreenCheck = document.querySelector(".twoGreenCheck");
+const openImg = document.querySelector(".characterOpenImg");
+const knowledgeOpenImg = document.querySelector(".open");
+const knowledgeCloseImg = document.querySelector(".close");
+const selectOptions = document.querySelectorAll(".option");
 let character_id;
 
 
@@ -50,6 +54,7 @@ connection("grandmasters")
                         if(!event.target.src){
                             grandmasterValue.innerText = event.target.innerText;
                             grandmasterList.classList.toggle("hide");
+                            openImg.classList.toggle("rotate");
                             character_id = grandOption[i].value;
                             localStorage.setItem("innerText", event.target.innerText);
                             localStorage.setItem("character_id", character_id);
@@ -73,20 +78,29 @@ connection("grandmasters")
 })
 
 
-otherOption.addEventListener("click", event =>{
-    grandmasterValue.innerText = event.target.innerText;
-    grandmasterList.classList.toggle("hide");
-    character_id = 0;
-    localStorage.setItem("innerText", event.target.innerText);
-    localStorage.setItem("character_id", character_id);
-})
+// otherOption.addEventListener("click", event =>{
+//     grandmasterValue.innerText = event.target.innerText;
+//     grandmasterList.classList.toggle("hide");
+//     character_id = 0;
+//     localStorage.setItem("innerText", event.target.innerText);
+//     localStorage.setItem("character_id", character_id);
+// })
 
 
 dropdown.addEventListener("click", event =>{
     grandmasterList.classList.toggle("hide");
+    openImg.classList.toggle("rotate");
+
     
 })
 
+selectExpirience.addEventListener("click", event =>{
+
+    knowledgeOpenImg.classList.toggle("hide");
+    knowledgeCloseImg.classList.toggle("hide");
+
+
+})
 
 
 
@@ -101,7 +115,7 @@ secondForm.addEventListener("submit", event =>{
         }
         
         
-        secondErrorMain.innerText = "Invalid Expirience"
+        secondErrorMain.innerText = "Invalid Level of knowladge"
         secondErrorInstr.innerText = "You should choose one from given options"
 
     } else  if(grandmasterValue.innerText !== "Nona Gaphrindashvili" && grandmasterValue.innerText !== "Mikhail Tal" 
@@ -110,7 +124,7 @@ secondForm.addEventListener("submit", event =>{
             secondErrorMessage.classList.toggle("hide");
         }
         console.log(grandmasterValue.innerText);
-        secondErrorMain.innerText = "Invalid Grandmaster"
+        secondErrorMain.innerText = "Invalid Character"
         secondErrorInstr.innerText = "You should choose one from given option"
 
       } else if (radioYes.checked === false && radioNo.checked === false){

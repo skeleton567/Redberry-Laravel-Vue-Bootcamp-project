@@ -28,6 +28,14 @@
 #list{
     width: 100%;
     padding: 0;
+    position: absolute;
+    transform: translateY(12px);
+    z-index: 1000;
+    width: 350px;
+    background-color: white;
+    box-shadow: 5px 10px 8px #888888;
+    border: 1px solid rgba(185, 180, 196, 0.3);
+    border-radius: 4px;
 }
 
 .options{
@@ -37,6 +45,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    margin-left: 18px;
     padding: 0;
 }
 
@@ -45,15 +54,10 @@
 }
 
 
-.options img{
-    width: 50px;
-    height: 50px;
-}
-
 .selectWrap{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 88px;
+    margin-bottom: 80px;
 }
 
 #expirience{
@@ -62,10 +66,12 @@
     -moz-appearance: none;
     appearance: none;
     -ms-appearance: none;
-    width: 350px;
-    border-bottom: 1px solid #E5E6E8;
+    width: 340px;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #E5E6E8;
+
 }
 
 #expirience:focus {
@@ -73,31 +79,34 @@
 }
 
 .dropdown{
-    width: 350px;
+    width: 340px;
     border-bottom: 1px solid #E5E6E8;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
 
-#list{
-    position: absolute;
-    top: 450px;
-    left: 1393px;
-    z-index: 1000;
-    width: 350px;
-    background-color: white;
-    box-shadow: 5px 10px 8px #888888
+.grandmasterImg{
+    width: 90px ;
+    height: 90px;
+    border-radius: 4px;
+    
+    margin-right: 4px;
+    
 }
 
-.grandmasterImg{
-    width: 90px !important;
-    height: 90px !important;
-    border-radius: 4px;
+#grandmasterImg3{
+    height: 85px ;
+    margin-right: 4px;
+}
+
+#grandmasterImg4{
+    height: 100px ;
+    margin-right: 4px;
 }
 
 #radio{
     font-family: 'Open Sans', sans-serif;
-    margin-bottom: 187px;
+    margin-bottom: 174px;
 }
 
 #question{
@@ -130,4 +139,37 @@
     font-size: 16px;
     margin-top: 16px;
     margin-left: 24px;
+}
+
+#pageInfo{
+    margin-bottom: 95px;
+}
+
+.selectNameWrap{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+}
+
+.openClose{
+    Width: 10px;
+    Height: 7px;
+}
+
+
+
+#selectImgWrap{
+    width: 350px;
+    
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.knowledgeOpenImg{
+    position: absolute;
+    transform: translate(-14px, 10px);
 }

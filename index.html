@@ -64,20 +64,20 @@
                 </div>
 
                 <div class="chessExp">
-                    <p lass="roadMapText">Personal information</p>
-                    <p lass="roadMapText">Chess expirience</p>
+                    <p class="roadMapText">Personal information</p>
+                    <p class="roadMapText">Chess expirience</p>
                 </div>
             </div>
 
             <div class="pageInfo">
                 <h1 class="pageName">Personal information</h1>
-                <p class="pageDisc">This is basic information fields</p>
+                <p class="pageDisc">This is Basic information fields</p>
             </div>
 
             <form id="firstForm" method="POST">
                 
-                <div class="inputWrap nameWrap">
-                <input class="input" type="text" name="name" id="name" placeholder="Name *" >
+                <div class="inputWrap nameWrap">    
+                <input class="input form-control" type="text" name="name" id="name" placeholder="Name *"> 
                 <img class="validImg nameImg hide" src="photos/valid.png" alt="">
                 </div>
                 <div class="inputWrap  emailWrap">
@@ -144,39 +144,45 @@
                     </div>
     
                     <div class="chessExp">
-                        <p lass="roadMapText">Personal information</p>
-                        <p lass="roadMapText">Chess expirience</p>
+                        <p class="roadMapText">Personal information</p>
+                        <p class="roadMapText">Chess expirience</p>
                     </div>
                 </div>
     
-                <div class="pageInfo">
-                    <h1 class="pageName">Personal information</h1>
-                    <p class="pageDisc">This is basic information fields</p>
+                <div id="pageInfo" class="pageInfo">
+                    <h1 class="pageName">Chess expirience</h1>
+                    <p class="pageDisc">This is Basic information fields</p>
                 </div>
                 
                 
             <form id="secondForm" method="POST">
-
                 <div class="selectWrap">
-                <select  name="expirience" id="expirience">
-                    <option value="" hidden selected>Level of knowladge<span class="redStar"> *</span></option>
+                    <div id="selectImgWrap">
+                <select name="expirience" id="expirience">
+                    <option value="" hidden selected>level of knowledge</option>
                     <option class="option" value="beginner">Beginner</option>
                     <option class="option" value="normal">Intermidiate</option>
                     <option class="option" value="professional">Professional</option>
                 </select>
+                <img class="openClose knowledgeOpenImg open" src="photos/close.png" alt="">
+                <img class="openClose hide knowledgeOpenImg close" src="photos/open.png" alt="">
+                 </div>
 
                 <div class="dropdown">
                     <div id="selectField">
+                        <span class="selectNameWrap">
                         <p id="grandmasterValue">Choose your character<span class="redStar"> *</span></p>
+                        <img class="openClose characterOpenImg" src="photos/close.png" alt="">
+                        </span>
                     </div>
 
                     <ul id="list" class="hide">
                         <p class="totalFour">(Total 4)</p>
                         <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
                         <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
-                        <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
-                        <il class="options grandOptions"><option class="grandOption"></option><img class="grandmasterImg" src="" alt=""></il>
-                        <il class="options"><option class="otherOption">Other</option><img id="other" src="photos/chess.webp" alt=""></il>
+                        <il class="options grandOptions"><option class="grandOption"></option><img id="grandmasterImg3" class="grandmasterImg" src="" alt=""></il>
+                        <il class="options grandOptions"><option class="grandOption"></option><img id="grandmasterImg4" class="grandmasterImg" src="" alt=""></il>
+                        <!-- <il class="options"><option class="otherOption">Other</option><img id="other" src="photos/chess.webp" alt=""></il> -->
                     </ul>
                 </div>
             </div>

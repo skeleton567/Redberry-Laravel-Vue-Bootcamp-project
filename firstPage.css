@@ -6,7 +6,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 60px;
-    padding-top: 25px;
+    padding-top: 187px;
     
 }
 
@@ -20,14 +20,14 @@
 
 
 #mainQuoteStart{
-   top: 185px;
+   top: 245px;
    left: 1008px;
    
 } 
 
 #mainQuoteMiddle{
     position: absolute;
-    Top: 226px;
+    Top: 286px;
     Left: 1530px;
     font-size: 20px;
     font-weight: 700 ;
@@ -36,7 +36,7 @@
  } 
 
 #mainQuoteEnd{
-    Top: 310px;
+    Top: 370px;
     Left: 1008px;
  } 
 
@@ -81,5 +81,4 @@
  }
 
  
-
  

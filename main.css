@@ -155,7 +155,7 @@ font-weight: 600;
 .pageInfo{
     margin-top: 0;
     font-family: 'Open Sans', sans-serif;
-    margin-bottom: 93px;
+    margin-bottom: 85px;
 } 
 
 .pageName{
@@ -227,7 +227,7 @@ font-weight: 600;
 }
 
 .hr{
-    width: 215px;
+    width: 176px;
     height: 1px ;
     background-color: rgba(185, 180, 196, 0.3);
     display: inline-block;
@@ -257,3 +257,4 @@ font-weight: 600;
 .submitBtn:hover{
     transform: translate(3px, -3px);
 }
+
