@@ -76,9 +76,27 @@ input:hover{
     height: 20px;
 }
 
-.input::after{
-    content: '*';
-    color: red
-}
-  
 
+.nameRedStar{
+    position: absolute;
+    color: red;
+    transform: translate(63px);
+}
+
+.emailRedStar{
+    position: absolute;
+    color: red;
+    transform: translate(138px);
+}
+
+.numberRedStar{
+    position: absolute;
+    color: red;
+    transform: translate(142px);
+}
+
+.dateRedStar{
+    position: absolute;
+    color: red;
+    transform: translate(120px);
+}

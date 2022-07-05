@@ -76,20 +76,24 @@
 
             <form id="firstForm" method="POST">
                 
-                <div class="inputWrap nameWrap">    
-                <input class="input form-control" type="text" name="name" id="name" placeholder="Name *"> 
+                <div class="inputWrap nameWrap">  
+                <span class="nameRedStar">*</span>  
+                <input class="input form-control" type="text" name="name" id="name" placeholder="Name"> 
                 <img class="validImg nameImg hide" src="photos/valid.png" alt="">
                 </div>
                 <div class="inputWrap  emailWrap">
-                <input class="input" type="email" name="email" id="email" placeholder="Email address *" >
+                <span class="emailRedStar">*</span>  
+                <input class="input" type="email" name="email" id="email" placeholder="Email address" >
                 <img class="validImg emailImg hide" src="photos/valid.png" alt="">
                 </div >
                 <div class="inputWrap  numberWrap"> 
-                <input class="input" type="number" name="number" id="number" placeholder="Phone number *">
+                <span class="numberRedStar">*</span>  
+                <input class="input" type="number" name="number" id="number" placeholder="Phone number">
                 <img class="validImg numberImg hide" src="photos/valid.png" alt="">
                 </div>
                 <div class="inputWrap dateWrap" id="lastInput">
-                <input class="input" type="textbox-n" name="date" id="date" onfocus="(this.type='date')"" placeholder="Date of birth *">
+                <span class="dateRedStar">*</span>  
+                <input class="input" type="textbox-n" name="date" id="date" onfocus="(this.type='date')"" placeholder="Date of birth">
                 <img class="validImg dateImg hide" src="photos/valid.png" alt="">
                 </div>
 
@@ -164,6 +168,7 @@
                     <option class="option" value="normal">Intermidiate</option>
                     <option class="option" value="professional">Professional</option>
                 </select>
+                <span class="selectRedStar">*</span>
                 <img class="openClose knowledgeOpenImg open" src="photos/close.png" alt="">
                 <img class="openClose hide knowledgeOpenImg close" src="photos/open.png" alt="">
                  </div>
