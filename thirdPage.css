@@ -45,8 +45,9 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    margin-left: 18px;
     padding: 0;
+    padding-left: 18px;
+    
 }
 
 .options:hover{
@@ -178,4 +179,25 @@
     position:absolute;
     color:red;
     transform: translate(-167px);
+ }
+
+
+ input[type='radio']{
+    width: 18px;
+    height: 18px;
+ }
+
+ input[type='radio']:checked:after{
+        width: 9px;
+        height: 9px;
+        border-radius: 15px;
+        top: -1px;
+        left: -1px;
+        position: relative;
+        background-color: white;
+        content: '';
+        display: inline-block;
+
+        visibility: visible;
+        border: 5px solid #0D6EFD;
  }

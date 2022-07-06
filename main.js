@@ -20,6 +20,8 @@ thirdPageBack.addEventListener("click", event =>{
     thirdPage.classList.toggle("hide");
     secondPage.classList.toggle("hide");
 
+    grandmasterList.classList.add("hide");
+
     if(!doneBtn.classList.contains("hide")){
         doneBtn.classList.toggle("hide");
         submitBtn.classList.toggle("hide");

@@ -47,7 +47,7 @@ connection("grandmasters")
                     grandOption[i].value = grandmaster.id;
                     grandmasterImg[i].src = `https://chess-tournament-api.devtest.ge${grandmaster.image}`;
                     grandOption[i].innerHTML = `${grandmaster.name}`;
-                    console.log(grandmasterImg);
+                    
 
                     grandOptions[i].addEventListener("click", event =>{
 
@@ -78,19 +78,10 @@ connection("grandmasters")
 })
 
 
-// otherOption.addEventListener("click", event =>{
-//     grandmasterValue.innerText = event.target.innerText;
-//     grandmasterList.classList.toggle("hide");
-//     character_id = 0;
-//     localStorage.setItem("innerText", event.target.innerText);
-//     localStorage.setItem("character_id", character_id);
-// })
-
-
 dropdown.addEventListener("click", event =>{
     grandmasterList.classList.toggle("hide");
     openImg.classList.toggle("rotate");
-
+    
     
 })
 
@@ -115,7 +106,7 @@ secondForm.addEventListener("submit", event =>{
         }
         
         
-        secondErrorMain.innerText = "Invalid Level of knowladge"
+        secondErrorMain.innerText = "Invalid Level of knowledge"
         secondErrorInstr.innerText = "You should choose one from given options"
 
     } else  if(grandmasterValue.innerText !== "Nona Gaphrindashvili" && grandmasterValue.innerText !== "Mikhail Tal" 
@@ -123,7 +114,7 @@ secondForm.addEventListener("submit", event =>{
         if(secondErrorMessage.classList.contains("hide")){
             secondErrorMessage.classList.toggle("hide");
         }
-        console.log(grandmasterValue.innerText);
+        
         secondErrorMain.innerText = "Invalid Character"
         secondErrorInstr.innerText = "You should choose one from given option"
 

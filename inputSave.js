@@ -18,7 +18,7 @@ email.value = localStorage.getItem("email");
 number.value = localStorage.getItem("number");
 date.value = localStorage.getItem("date");
 
-console.log();
+
 
 if(localStorage.getItem("name")){
     nameRedStar.classList.add("hide");
@@ -55,7 +55,7 @@ if(localStorage.getItem("expirience")){
 
 name.addEventListener("input", event =>{
     localStorage.setItem("name", name.value);
-    console.log(localStorage.getItem("name"))
+    
 
     secondPageNumOne.classList.add("greyBack");
     nameWrap.classList.remove("inputval");
@@ -71,7 +71,7 @@ name.addEventListener("input", event =>{
 
 email.addEventListener("input", event =>{
     localStorage.setItem("email", email.value);
-    console.log(localStorage.getItem("email"))
+    
 
     secondPageNumOne.classList.add("greyBack");
     emailWrap.classList.remove("inputval");
@@ -87,7 +87,7 @@ email.addEventListener("input", event =>{
 
 number.addEventListener("input", event =>{
     localStorage.setItem("number", number.value);
-    console.log(localStorage.getItem("number"))
+    
 
     secondPageNumOne.classList.add("greyBack");
     numberWrap.classList.remove("inputval");
@@ -103,7 +103,7 @@ number.addEventListener("input", event =>{
 
 date.addEventListener("input", event =>{
     localStorage.setItem("date", date.value);
-    console.log(localStorage.getItem("date"))
+    
 
     secondPageNumOne.classList.add("greyBack");
     dateWrap.classList.remove("inputval");
@@ -116,11 +116,14 @@ date.addEventListener("input", event =>{
 
 date.addEventListener("click", event =>{
     dateRedStar.classList.add("hide");
+    date.type = "date";
 })
+
+
 
 selectExpirience.addEventListener("change", event =>{
     localStorage.setItem("expirience", selectExpirience.value);
-    console.log(localStorage.getItem("expirience"))
+    
 
     thirdPageNumtwo.classList.add("greyBack");
 
@@ -138,7 +141,7 @@ selectExpirience.addEventListener("change", event =>{
 radios.forEach(radio =>{
     radio.addEventListener("click", event =>{
         localStorage.setItem("participated", radio.value);
-        console.log(localStorage.getItem("participated"))
+        
 
         thirdPageNumtwo.classList.add("greyBack");
 

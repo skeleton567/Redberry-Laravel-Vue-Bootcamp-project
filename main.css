@@ -142,7 +142,12 @@ font-weight: 600;
     font-size: 18px;
     line-height: 25px;
     border: 1px solid #E5E6E8;
-    padding: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 }
 
 .roadMapText{
@@ -234,7 +239,7 @@ font-weight: 600;
 }
 
 .twoGreenCheck{
-    width: 15px;
+    width: 22px;
     height: 15px;
 }
 

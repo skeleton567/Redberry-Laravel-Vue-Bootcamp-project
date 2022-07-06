@@ -8,7 +8,7 @@ doneBtn.addEventListener("click", event =>{
         date_of_birth: date.value
     }
 
-    console.log(persInfo);
+   
 
     persInfo.experience_level = selectExpirience.value;
 
@@ -17,7 +17,7 @@ doneBtn.addEventListener("click", event =>{
     let checkedRadio = document.querySelector('input[name="participated"]:checked');
     persInfo.already_participated = JSON.parse(checkedRadio.value.toLowerCase());
 
-    console.log(persInfo);
+    
 
     try {
         fetch("https://chess-tournament-api.devtest.ge/api/register", {
