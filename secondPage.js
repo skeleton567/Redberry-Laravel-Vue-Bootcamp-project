@@ -20,7 +20,7 @@ firstForm.addEventListener("submit", event =>{
     let phoneRegex = /^[0-9]*$/;
     let emailRegex = /.@redberry.ge$/
 
-    if (name.value.length < 2 || name.value === "" || name.value === null ){
+    if (name.value.trim().length < 2 || name.value === "" || name.value === null ){
 
 
         if(errorMessage.classList.contains("hide")){
@@ -47,7 +47,7 @@ firstForm.addEventListener("submit", event =>{
         nameImg.classList.remove("hide");
 
 
-      } else if (number.value.length !== 9 || number.value === "" || number.value === null || !phoneRegex.test(number.value) ){
+      } else if (number.value.trim().length !== 9 || number.value === "" || number.value === null || !phoneRegex.test(number.value) ){
         if(errorMessage.classList.contains("hide")){
             errorMessage.classList.toggle("hide");
         }
@@ -60,7 +60,7 @@ firstForm.addEventListener("submit", event =>{
         nameImg.classList.remove("hide");
         emailImg.classList.remove("hide");
 
-    } else if (date.value.length < 1 || date.value === "" || date.value === null ){
+    } else if (date.value.trim().length < 1 || date.value === "" || date.value === null ){
         if(errorMessage.classList.contains("hide")){
             errorMessage.classList.toggle("hide");
         }

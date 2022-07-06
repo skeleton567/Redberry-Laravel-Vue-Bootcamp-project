@@ -181,10 +181,14 @@
     transform: translate(-167px);
  }
 
+ label{
+    cursor: pointer;
+ }
 
  input[type='radio']{
     width: 18px;
     height: 18px;
+    cursor: pointer;
  }
 
  input[type='radio']:checked:after{
