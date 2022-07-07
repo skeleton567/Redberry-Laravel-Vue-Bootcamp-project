@@ -3,6 +3,8 @@ const firstPage  = document.querySelector("#firstPage");
 const secondPage  = document.querySelector("#secondPage");
 const closeErrbtn = document.querySelector(".closeErr");
 const secondCloseErrbtn = document.querySelector("#closeErr");
+const secondPageBack = document.querySelector("#secondPageBack");
+const thirdPageBack = document.querySelector("#thirdPageBack");
 
 
 
